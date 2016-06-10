@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='emacs'
+export VISUAL='emacs'
 export PAGER='less'
 
 #
@@ -41,10 +41,29 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
+export PROV_MAVEN_HOME=~/lookingglass/java/tools/apache-maven-2.2.1
+export LVP_MAVEN_HOME=/Users/jhenrie/lookingglass/java/tools/apache-maven-3.0.4
+export MAVEN_HOME=${PROV_MAVEN_HOME}
+export JAVA_HOME=`/usr/libexec/java_home`
+export ANT_HOME=/usr/bin/ant
+export FLASH_PLAYER=/Applications/Flash\ Player.app/Contents/MacOS
+
+export GOPATH=/Users/jhenrie/Documents/code/go-home
+
+export NETHACK_HOME=/usr/games/lib/nethackdir
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
   $path
+  $MAVEN_HOME/bin
+  $FLASH_PLAYER
+  /Users/jhenrie/lookingglass/bin
+  /bin
+  /usr/{bin,sbin}
+  /sbin
+  /usr/games
+  /usr/local/mysql/bin
 )
 
 #
