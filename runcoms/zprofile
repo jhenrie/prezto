@@ -43,19 +43,16 @@ typeset -gU cdpath fpath mailpath path
 
 export PROV_MAVEN_HOME=~/lookingglass/java/tools/apache-maven-2.2.1
 export LVP_MAVEN_HOME=/Users/jhenrie/lookingglass/java/tools/apache-maven-3.0.4
-export MAVEN_HOME=${PROV_MAVEN_HOME}
+export MAVEN_HOME=${LVP_MAVEN_HOME}
 export JAVA_HOME=`/usr/libexec/java_home`
 export ANT_HOME=/usr/bin/ant
 export FLASH_PLAYER=/Applications/Flash\ Player.app/Contents/MacOS
-
 export GOPATH=/Users/jhenrie/Documents/code/go-home
-
 export NETHACK_HOME=/usr/games/lib/nethackdir
 
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  $path
   $MAVEN_HOME/bin
   $FLASH_PLAYER
   /Users/jhenrie/lookingglass/bin
@@ -64,6 +61,9 @@ path=(
   /sbin
   /usr/games
   /usr/local/mysql/bin
+  /opt/X11/bin
+  /Applications/Server.app/Contents/ServerRoot/usr/{bin,sbin}
+  /opt/ImageMagick/bin
 )
 
 #
@@ -91,3 +91,10 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Alias
+#
+alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
+alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
