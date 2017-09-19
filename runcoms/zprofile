@@ -47,7 +47,9 @@ export MAVEN_HOME=${LVP_MAVEN_HOME}
 export JAVA_HOME=`/usr/libexec/java_home`
 export ANT_HOME=/usr/bin/ant
 export FLASH_PLAYER=/Applications/Flash\ Player.app/Contents/MacOS
-export GOPATH=/Users/jhenrie/Documents/code/go-home
+export CLOUD_GO_PATH=/Users/jhenrie/Documents/code/cloud/go-lmd-ws
+export PERSONAL_GO_PATH=/Users/jhenrie/Documents/code/go-home
+export GOPATH=$CLOUD_GO_PATH
 export NETHACK_HOME=/usr/games/lib/nethackdir
 
 # Set the list of directories that Zsh searches for programs.
@@ -98,3 +100,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 alias setJdk6='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)'
 alias setJdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
 alias setJdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+
+alias setCloudGo='unset GOPATH; export GOPATH=$CLOUD_GO_PATH'
+alias setPersonalGo='unset GOPATH; export GOPATH=$PERSONAL_GO_PATH'
