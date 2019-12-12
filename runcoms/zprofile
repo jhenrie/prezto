@@ -49,6 +49,8 @@ export ANT_HOME=/usr/bin/ant
 export FLASH_PLAYER=/Applications/Flash\ Player.app/Contents/MacOS
 export NETHACK_HOME=/usr/games/lib/nethackdir
 
+export GOPRIVATE="github.llnw.net/jhenrie,github.llnw.net/faas"
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
